@@ -2,7 +2,7 @@ FROM alpine:3.15
 ENV KUSTOMIZE_VER 4.5.2
 ENV KUBECTL_VER 1.22.0
 
-RUN apk --no-cache add curl gettext sed
+RUN apk --no-cache add curl gettext sed bash
 
 RUN curl -L https://github.com/kubernetes-sigs/kustomize/releases/download/v${KUSTOMIZE_VER}/kustomize_${KUSTOMIZE_VER}_linux_amd64  -o /usr/bin/kustomize \
     && chmod +x /usr/bin/kustomize
